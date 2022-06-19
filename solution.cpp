@@ -14,8 +14,7 @@ bool Solution::isSameTree(Node *p, Node *q)
   /* both are leaf nodes */
   if (p == nullptr && q == nullptr)
     return true;
-  if ((p == nullptr && q != nullptr) ||
-      (p != nullptr && q == nullptr))
+  if (p == nullptr || q == nullptr)
     return false;
 
   if (p->val != q->val)
